@@ -1,0 +1,26 @@
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+(
+    /(
+        \.eggs
+      | \.git
+      | \.hg
+      | \.mypy_cache
+      | \.tox
+      | \.venv
+      | _build
+      | buck-out
+      | build
+      | dist
+      | jemdoc_mathjax   # excluding the jemdoc_mathjax directory
+    )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+skip = ["*.pyc", "__pycache__", "build/*", "jemdoc_mathjax/*"]
+known_third_party = ["flask", "watchdog"]
