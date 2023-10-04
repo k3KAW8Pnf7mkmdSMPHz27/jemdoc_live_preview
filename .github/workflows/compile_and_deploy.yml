@@ -1,0 +1,35 @@
+name: Generate and Deploy Jemdoc
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4.1.0
+      with:
+        submodules: 'recursive'
+
+    - name: Set up Python
+      uses: actions/setup-python@v4.7.1
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+
+    - run: pip install .
+
+    - name: Generate jemdoc files
+      run: |
+        # Compile files outside of the submodule
+        python3 utilities/jemdoc_mediator
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.4.3
+      with:
+        branch: gh-pages
+        folder: .
