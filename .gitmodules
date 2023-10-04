@@ -1,0 +1,3 @@
+[submodule "jemdoc_mathjax"]
+	path = jemdoc_mathjax
+	url = https://github.com/wsshin/jemdoc_mathjax.git
