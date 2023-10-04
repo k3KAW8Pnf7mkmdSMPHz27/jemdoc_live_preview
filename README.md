@@ -12,4 +12,5 @@ Setup GitHub pages in the GitHub repository
 
 https://github.com/jshang2/jshang2.github.io
 https://jshang2.github.io/
-
+https://github.com/szl2/jemdoc-new-design
+https://yilinfang.github.io/
