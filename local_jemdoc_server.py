@@ -56,7 +56,7 @@ def _send_file_with_injected_reloading(filename: str):
         modified_content = content.replace(
             "</body>",
             """
-            <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+            <script src='http://127.0.0.1:5000/4.7.2_socket.io.min.js'></script>
             <script>
                 var socket = io.connect('http://' + document.domain + ':' + location.port);
                 socket.on('reload', function() {
