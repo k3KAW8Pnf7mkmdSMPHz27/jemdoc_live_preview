@@ -53,3 +53,9 @@ def copy_default_css_file():
             f"Did not find a css file in {WORKING_DIR}, attempting to copy the default one at {jemdoc_css}"
         )
         shutil.copy(jemdoc_css, WORKING_DIR / "jemdoc.css")
+
+
+if __name__ == "__main__":
+    WORKING_DIR.mkdir(exist_ok=True)
+    copy_default_css_file()
+    compile_all_jemdoc_files()

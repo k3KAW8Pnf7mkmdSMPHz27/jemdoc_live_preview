@@ -7,7 +7,7 @@ from flask_socketio import SocketIO
 from watchdog.events import FileSystemEvent, RegexMatchingEventHandler
 from watchdog.observers import Observer
 
-from utilities.jemdoc_helper import (
+from utilities.jemdoc_mediator import (
     WORKING_DIR,
     compile_all_jemdoc_files,
     compile_jemdoc_file,
