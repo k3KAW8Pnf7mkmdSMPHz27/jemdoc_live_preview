@@ -4,21 +4,22 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="jemdoc_mathjax_local_server",
+    name="local_jemdoc_mathjax_server",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Jonatan Asketorp",
+    author_email="jonatan.asketorp@proton.me",
     description="A local server utility for prototyping with jemdoc_mathjax",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/your_github_username/jemdoc_mathjax_local_server",
-    packages=["jemdoc_mathjax_local_server"],
+    url="https://github.com/k3KAW8Pnf7mkmdSMPHz27/jemdoc_mathjax_experiments",
+    packages=["utilities"],
+    py_modules=["local_jemdoc_server"],
     classifiers=[
         "Programming Language :: Python :: 3.8",
         "License :: OSI Approved :: The Unlicense (Unlicense)",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     install_requires=[
         "Flask>=2.0.0,<3.0.0",
         "flask-socketio>=5.0.0,<6.0.0",
@@ -29,7 +30,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "jemdoc_mathjax_server=jemdoc_mathjax_local_server.jemdoc_mathjax_local_server:main",
+            "local_jemdoc_server = local_jemdoc_server:main",
         ],
     },
 )
